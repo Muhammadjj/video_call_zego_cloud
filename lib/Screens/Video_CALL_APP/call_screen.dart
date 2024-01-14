@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_call_zego_cloud/Utils/zego_cloud_info.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 
 class CallPage extends StatefulWidget {
@@ -19,10 +20,9 @@ class _CallPageState extends State<CallPage> {
   Widget build(BuildContext context) {
     return ZegoUIKitPrebuiltCall(
       // Fill in the appID that you get from ZEGOCLOUD Admin Console.
-      appID: 385137147,
+      appID: ZegoCloudInfo.appID,
       // Fill in the appSign that you get from ZEGOCLOUD Admin Console.
-      appSign:
-          "ab301647ece5db9134f209aebd9770bd5b631df3a90a5f7e776707a5e2c043c4",
+      appSign: ZegoCloudInfo.appSign,
       userID: userID,
       userName: userName,
       callID: "my_name_is_jawad",
