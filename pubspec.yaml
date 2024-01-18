@@ -33,10 +33,20 @@ dependencies:
 
 
   # The following adds the Cupertino Icons font to your application.
-  # !Use with the CupertinoIcons class for iOS style icons.
+  # ! Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # ! Integrating pre_build call kit 
   zego_uikit_prebuilt_call: ^4.1.4
+  # ! Connect to Firebase and Flutter SDK .
+  firebase_core: ^2.24.2
+  # ! beautiful Fonts .
+  google_fonts: ^6.1.0
+  # ! Handle this authentication 
+  firebase_auth: ^4.16.0
+  # ! store data in firebase 
+  cloud_firestore: ^4.14.0
+  # ! handle this Validations such as email, password ........
+  form_validator: ^2.1.1
 
 dev_dependencies:
   flutter_test:

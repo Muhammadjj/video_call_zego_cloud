@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "771582193833",
+    "project_id": "zego-cloud-firebase-app",
+    "storage_bucket": "zego-cloud-firebase-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771582193833:android:751bf2e18e271805b1f9b8",
+        "android_client_info": {
+          "package_name": "com.example.video_call_zego_cloud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4hFJq41jXdEuW3o4JJZiKOk1Z6AKV1Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
