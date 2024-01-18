@@ -1,9 +1,7 @@
 import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:form_validator/form_validator.dart';
-
+import 'package:video_call_zego_cloud/Screens/Auth/Login_Page/login_page_main.dart';
 import '../../../Components/Widgets/custom_size_box.dart';
 import '../../../Export/export.dart';
 
@@ -94,19 +92,42 @@ class _SignUpPageState extends State<SignUpPage> {
 
                 //! Button Sections
                 ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
                       if (formKey.currentState!.validate()) {
                         try {
-                          auth
+                          await auth
                               .createUserWithEmailAndPassword(
                                   email: email.text.toString(),
                                   password: password.text.toString())
                               .then((value) {
                             log("Successfully");
+
+                            // if (usercre.user != null) {
+                            var data = {
+                              "userName": userName.text.toString(),
+                              "email": email.text.toString(),
+                              "created_at": DateTime.now()
+                            };
+
+                            firestore
+                                .collection("users")
+                                .doc(auth.currentUser!.uid)
+                                .set(data)
+                                .then((value) {
+                              log("store");
+                            });
+                            // }
+
                             // Clear this fields
-                            userName.clear();
-                            email.clear();
-                            password.clear();
+                            // userName.clear();
+                            // email.clear();
+                            // password.clear();
+
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const HomePage(),
+                                ));
                           });
                         } on FirebaseAuthException catch (e) {
                           if (e.code == 'weak-password') {
@@ -121,7 +142,26 @@ class _SignUpPageState extends State<SignUpPage> {
                     },
                     style: const ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(Colors.lime)),
-                    child: const Text("Sign Up"))
+                    child: const Text("Sign Up")),
+                // ! Sign Up Text
+                const CustomSizedBox(heightRatio: 0.01),
+                Row(children: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ));
+                    },
+                    child: const Text(
+                      "LogIn Page",
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      style: TextStyle(color: Colors.red),
+                    ),
+                  ),
+                ])
               ],
             ),
           )),
