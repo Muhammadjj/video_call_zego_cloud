@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:video_call_zego_cloud/Screens/Auth/Login_Page/login_page_main.dart';
+import 'package:video_call_zego_cloud/Screens/Search_Page/search_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +17,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Social App"),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SearchPage(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.search))
+        ],
       ),
       drawer: Drawer(
         child: ListView(

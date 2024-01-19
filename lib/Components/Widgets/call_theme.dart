@@ -6,5 +6,10 @@ abstract class ZEGOCloudTheme {
     fontFamily: GoogleFonts.ibmPlexSans().fontFamily,
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
     useMaterial3: true,
+    appBarTheme: const AppBarTheme(
+        centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.deepPurple,
+        actionsIconTheme: IconThemeData(color: Colors.white)),
   );
 }
