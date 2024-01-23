@@ -58,7 +58,7 @@ class _SearchPageState extends State<SearchPage> {
 
                       return Expanded(
                         child: ListView.builder(
-                          itemCount: snapshot.data?.docs.length,
+                          itemCount: snapshot.data?.docs.length ?? 0,
                           itemBuilder: (context, index) {
                             DocumentSnapshot doc = snapshot.data!.docs[index];
                             return ListTile(
