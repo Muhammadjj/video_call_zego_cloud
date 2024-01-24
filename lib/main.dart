@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:video_call_zego_cloud/Components/Widgets/call_theme.dart';
-// import 'package:video_call_zego_cloud/Screens/Auth/Login_Page/login_page_main.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:video_call_zego_cloud/Seperate_Code/Utils/zego_cloud_info.dart';
 import 'package:video_call_zego_cloud/View_Zego_Cloud/Sample_Chatting_Zego_Cloud/sample_chat.dart';
@@ -11,7 +10,7 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // initial Zego Cloud
+  // initial Zego Cloud Chat init()
   await ZIMKit()
       .init(appID: ZegoCloudInfo.appID, appSign: ZegoCloudInfo.appSign);
   await Firebase.initializeApp(
