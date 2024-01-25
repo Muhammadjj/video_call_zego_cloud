@@ -1,11 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/services.dart';
-import 'package:video_call_zego_cloud/Components/Widgets/call_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:video_call_zego_cloud/Seperate_Code/Utils/zego_cloud_info.dart';
-import 'package:video_call_zego_cloud/View_Zego_Cloud/Sample_Chatting_Zego_Cloud/sample_chat.dart';
+import 'package:flutter/services.dart';
 import 'package:zego_zimkit/zego_zimkit.dart';
+
+import 'package:video_call_zego_cloud/Components/Widgets/call_theme.dart';
+import 'package:video_call_zego_cloud/Seperate_Code/Utils/zego_cloud_info.dart';
+
 import 'Export/export.dart';
+import 'View_Zego_Cloud/Live_Streaming/live_streaming_login_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -39,6 +41,6 @@ class _VideoCallChatAppState extends State<VideoCallChatApp> {
         title: 'Video Call Chat App',
         theme: ZEGOCloudTheme.zegoCloudTheme,
         // home: auth.currentUser == null ? const LoginPage() : const HomePage(),
-        home: const ZimLoginPage());
+        home: const LiveStreamingLoginPage());
   }
 }

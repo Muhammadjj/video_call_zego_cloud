@@ -47,9 +47,11 @@ dependencies:
   cloud_firestore: ^4.14.0
   # ! handle this Validations such as email, password ........
   form_validator: ^2.1.1
-  # ! Zego Cloud help for a Catting other end User .
+  # ! Zego Cloud help for a Chatting other end User .
   zego_zimkit: ^1.16.1
   zego_zim: ^2.13.1
+  # ! Zego Cloud help for a Live Streaming such as (Bigo Live, yalla Ludo)
+  zego_uikit_prebuilt_live_streaming: ^3.0.0
 
 dev_dependencies:
   flutter_test:
