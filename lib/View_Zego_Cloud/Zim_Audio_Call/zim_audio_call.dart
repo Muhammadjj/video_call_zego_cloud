@@ -1,7 +1,7 @@
-import 'package:video_call_zego_cloud/View_Zego_Cloud/Components/Utils/zego_cloud_info.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 
 import '../../Export/export.dart';
+import '../Components/Utils/zego_cloud_info.dart';
 
 class ZimAudioCall extends StatefulWidget {
   const ZimAudioCall({super.key, required this.callID, required this.userID});
