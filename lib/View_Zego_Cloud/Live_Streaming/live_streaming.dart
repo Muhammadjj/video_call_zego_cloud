@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_call_zego_cloud/Seperate_Code/Utils/zego_cloud_info.dart';
+import 'package:video_call_zego_cloud/View_Zego_Cloud/Components/Utils/zego_cloud_info.dart';
 import 'package:zego_uikit_prebuilt_live_streaming/zego_uikit_prebuilt_live_streaming.dart';
 
 class LiveStreamingBasePage extends StatefulWidget {

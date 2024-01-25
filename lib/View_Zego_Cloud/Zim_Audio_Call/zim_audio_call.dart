@@ -1,4 +1,4 @@
-import 'package:video_call_zego_cloud/Seperate_Code/Utils/zego_cloud_info.dart';
+import 'package:video_call_zego_cloud/View_Zego_Cloud/Components/Utils/zego_cloud_info.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 
 import '../../Export/export.dart';

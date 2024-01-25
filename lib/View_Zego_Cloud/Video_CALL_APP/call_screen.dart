@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../View_Zego_Cloud/Components/Utils/zego_cloud_info.dart';
+import '../Components/Utils/zego_cloud_info.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 
 class CallPage extends StatefulWidget {

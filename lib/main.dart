@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:zego_zimkit/zego_zimkit.dart';
 
 import 'package:video_call_zego_cloud/Components/Widgets/call_theme.dart';
-import 'package:video_call_zego_cloud/Seperate_Code/Utils/zego_cloud_info.dart';
+import 'package:video_call_zego_cloud/View_Zego_Cloud/Components/Utils/zego_cloud_info.dart';
 
 import 'Export/export.dart';
 import 'View_Zego_Cloud/Live_Streaming/live_streaming_login_page.dart';
